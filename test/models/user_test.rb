@@ -31,7 +31,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email validation should accept valid addresses" do
-    valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org first.last@foo,jp alice+bob@baz.cn]
+    valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org first.last@foo.jp alice+bob@baz.cn]
     valid_addresses.each do |valid_addresses|
       @user.email = valid_addresses
       assert @user.valid?, "#{valid_addresses.inspect} should be valid"
@@ -39,7 +39,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email validation should reject invalid address" do
-    invalid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org first.last@foo,jp alice+bob@baz.cn]
+    invalid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org first.last@foo.jp alice+bob@baz.cn]
     invalid_addresses.each do |invalid_addresses|
       @user.email = invalid_addresses
       assert_not @user.invalid?, "#{invalid_addresses.inspect} should be invalid"
