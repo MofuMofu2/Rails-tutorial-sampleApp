@@ -18,7 +18,7 @@
   "containerDefinitions": [
     {
       "name": "web",
-      "image": "dockerhub/ruby:2.5",
+      "image": "ruby:2.5",
       "essential": true,
       "memory": 128,
       "mountPoints": [
