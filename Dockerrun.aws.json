@@ -1,0 +1,29 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "volumes": [
+    {
+      "name": "Rails-tutorial-Sampleapp",
+      "host": {
+        "sourcePath": "var/app/current/myapp"
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "Rails-tutorial-Sampleapp",
+      "image": "dockerhub/ruby:2.5",
+      "essential": true,
+      "memory": 128,
+      "mountPoints": [
+        {
+          "sourceVolume": "Rails-tutorial-Sampleapp",
+          "containerPath": "/var/www/html",
+          "readOnly": true
+        }
+      ]
+    },
+    {
+      
+    }
+  ]
+}
