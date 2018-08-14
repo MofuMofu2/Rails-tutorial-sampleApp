@@ -4,7 +4,7 @@
     {
       "name": "Rails-tutorial-sampleApp",
       "host": {
-        "sourcePath": "var/app/current"
+        "sourcePath": "/var/app/current"
       }
     }
     ,
