@@ -2,7 +2,7 @@
   "AWSEBDockerrunVersion": 2,
   "volumes": [
     {
-      "name": "_",
+      "name": "Rails-tutorial-sampleApp",
       "host": {
         "sourcePath": "var/app/current"
       }
@@ -53,9 +53,11 @@
           "readOnly": true
         }
       ],
-      "portMappings":[
-        "containerPort": 5432,
-        "hostPort": 5432
+      "portMappings": [
+        {
+          "containerPort": 5432,
+          "hostPort": 5432
+        }
       ]
     }
   ]
