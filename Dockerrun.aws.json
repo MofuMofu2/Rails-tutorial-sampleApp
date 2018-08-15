@@ -14,9 +14,7 @@
       "links": [
         "db"
       ]
-    }
-  ],
-  "containerDefinitions" :[
+    },
     {
       "name": "db",
       "image": "postgres",
