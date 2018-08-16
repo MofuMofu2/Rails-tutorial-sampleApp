@@ -1,0 +1,8 @@
+db:
+  image: postgres
+web:
+  image: ruby:2.5
+  links:
+  - db:db
+  ports:
+  - 80:80
