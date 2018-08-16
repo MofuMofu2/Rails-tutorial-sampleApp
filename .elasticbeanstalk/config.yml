@@ -1,6 +1,6 @@
 branch-defaults:
   docker-compose:
-    environment: null
+    environment: Rails-tutorial-sampleApp
 global:
   application_name: Rails-tutorial-sampleApp
   branch: null
