@@ -7,4 +7,4 @@ COPY Gemfile.lock /myapp/Gemfile.lock
 RUN bundle install
 COPY . /myapp
 EXPOSE 80
-# CMD [ "rails", "db:migrate"]
+CMD [ "rails", "db:migrate"]
