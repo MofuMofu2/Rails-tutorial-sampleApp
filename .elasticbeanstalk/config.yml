@@ -1,15 +1,11 @@
 branch-defaults:
   docker-compose:
-    environment: Rails-tutorial-sampleApp
-environment-defaults:
-  Rails-tutorial-sampleApp:
-    branch: null
-    repository: null
+    environment: Rails-tutorial-SampleApp-dev
 global:
-  application_name: Rails-tutorial-sampleApp
+  application_name: Rails-tutorial-SampleApp
   branch: null
   default_ec2_keyname: Rails-tutorial-SampleApp
-  default_platform: docker
+  default_platform: Docker 18.03.1-ce
   default_region: ap-northeast-1
   include_git_submodules: true
   instance_profile: null
