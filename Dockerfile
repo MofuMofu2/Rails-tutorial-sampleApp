@@ -8,5 +8,5 @@ RUN bundle install
 COPY . /myapp
 ADD start.sh /myapp/bin/start.sh
 RUN chmod +x /myapp/bin/start.sh
-EXPOSE 3000
+EXPOSE 80
 CMD [ "bin/start.sh"]
