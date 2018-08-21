@@ -6,7 +6,7 @@ services:
     volumes:
       - .:/myapp
     ports:
-      - "80:80"
+      - "443:80"
     depends_on:
       - db
   db:
