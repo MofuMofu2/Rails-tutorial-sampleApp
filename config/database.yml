@@ -24,4 +24,5 @@ test:
   database: <%= ENV['RDS_DB_NAME'] %>
 
 production:
+  <<: *default
   database: <%= ENV['RDS_DB_NAME'] %>
