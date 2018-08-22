@@ -1,0 +1,24 @@
+{
+  "AWSEBDockerrunVersion": 1,
+  "containerDefinitions" : [
+    {
+      "name": "web",
+      "image": "ruby:2.5",
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": [
+        "db"
+      ]
+    },
+    {
+      "name": "db",
+      "image": "postgres",
+      "memory": 128
+    }
+  ]
+}
