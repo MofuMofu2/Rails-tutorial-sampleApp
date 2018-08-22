@@ -16,7 +16,7 @@ jobs:
           command: sudo pip install awsebcli
       - run:
           name: eb deploy
-          command: Rails-tutorial-SampleApp
+          command: eb deploy Rails-tutorial-SampleApp
 
 workflows:
   version: 2
