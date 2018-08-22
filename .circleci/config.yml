@@ -17,3 +17,13 @@ jobs:
       - run:
           name: eb deploy
           command: Rails-tutorial-SampleApp
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - eb-Rails-tutorial-Sampleapp:
+          filters:
+            branches:
+              only:
+                - docker-compose
