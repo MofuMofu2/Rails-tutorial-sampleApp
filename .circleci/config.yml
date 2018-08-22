@@ -18,8 +18,10 @@ jobs:
               sudo pip install awsebcli --upgrade
 
       - run:
-          name: eb deploy
-          command: eb deploy Rails-tutorial-SampleApp-dev
+          name: eb test
+          command: eb list
+          # name: eb deploy
+          # command: eb deploy Rails-tutorial-SampleApp-dev
 
 workflows:
   version: 2
