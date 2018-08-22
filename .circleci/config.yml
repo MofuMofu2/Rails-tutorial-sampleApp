@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  eb-Rails-tutorial-Sampleapp:
+    docker:
+      - image: circleci/2.5.1-node-browsers
+      
+    working_directory: ~/myapp
+    
+    steps:
+      - checkout
+      - run:
+          name: Install pip
+          command: sudo apt-get install python-pip python-dev build-essential
+      - run:
+          name: Install awsebcli
+          command: sudo pip install awsebcli
+      - run:
+          name: eb deploy
+          command: Rails-tutorial-SampleApp
