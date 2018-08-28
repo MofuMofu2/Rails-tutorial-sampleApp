@@ -41,6 +41,7 @@ end
 group :production do
   gem 'pg', '0.20.0'
   gem 'fog-aws', '0.7.6'
+  gem 'nokogiri', '1.8.4'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
