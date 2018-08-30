@@ -5,7 +5,7 @@ WORKDIR /myapp
 COPY Gemfile /myapp
 COPY Gemfile.lock /myapp/Gemfile.lock
 RUN gem install nokogiri
-RUN gem install gem nio4r
+RUN gem install nio4r
 RUN bundle install
 COPY . /myapp
 ADD start.sh /myapp/bin/start.sh
