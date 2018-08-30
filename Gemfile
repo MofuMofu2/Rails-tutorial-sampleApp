@@ -19,8 +19,8 @@ gem 'bootstrap-will_paginate', '1.0.0'
 
 
 group :development, :test do
-  gem 'pg', '0.20.0'
-  # gem 'sqlite3', '1.3.13'
+  # gem 'pg', '0.20.0'
+  gem 'sqlite3', '1.3.13'
   gem 'byebug',  '10.0.2', platform: :mri
 end
 
