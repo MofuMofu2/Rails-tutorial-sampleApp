@@ -9,6 +9,7 @@ RUN gem install nio4r
 RUN gem install websocket-driver
 RUN gem install bcrypt
 RUN gem install bindex
+RUN gem install msgpack
 RUN bundle install
 COPY . /myapp
 ADD start.sh /myapp/bin/start.sh
