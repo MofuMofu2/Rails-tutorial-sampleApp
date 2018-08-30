@@ -4,6 +4,7 @@ RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp
 COPY Gemfile.lock /myapp/Gemfile.lock
+RUN bundle install nokogiri
 RUN bundle install
 COPY . /myapp
 ADD start.sh /myapp/bin/start.sh
