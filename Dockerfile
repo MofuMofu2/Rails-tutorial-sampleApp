@@ -7,6 +7,7 @@ COPY Gemfile.lock /myapp/Gemfile.lock
 RUN gem install nokogiri
 RUN gem install nio4r
 RUN gem install websocket-driver
+RUN gem install bcrypt
 RUN bundle install
 COPY . /myapp
 ADD start.sh /myapp/bin/start.sh
