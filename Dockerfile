@@ -10,6 +10,7 @@ RUN gem install websocket-driver
 RUN gem install bcrypt
 RUN gem install bindex
 RUN gem install msgpack
+RUN gem install bootsnap
 RUN bundle install
 COPY . /myapp
 ADD start.sh /myapp/bin/start.sh
