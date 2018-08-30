@@ -11,6 +11,7 @@ RUN gem install bcrypt
 RUN gem install bindex
 RUN gem install msgpack
 RUN gem install bootsnap
+RUN gem install ffi
 RUN bundle install
 COPY . /myapp
 ADD start.sh /myapp/bin/start.sh
