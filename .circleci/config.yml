@@ -33,5 +33,4 @@ workflows:
           filters:
             branches:
               only:
-                - docker-compose
-                - add-CircleCI
+                - master
