@@ -8,7 +8,14 @@ gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'nokogiri', '1.8.4'
+gem 'nio4r', '2.3.1'
+gem 'websocket-driver'
+gem 'bcrypt'
+gem 'bindex'
+gem 'msgpack'
+gem 'ffi'
+gem 'bootsnap', '1.1.0'
 gem 'bootstrap-sass', '3.3.7'
 gem 'bcrypt',       '3.1.11'
 gem 'faker',          '1.7.3'
@@ -17,10 +24,9 @@ gem 'mini_magick',             '4.7.0'
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
 
-
 group :development, :test do
-  gem 'pg', '0.20.0'
-  # gem 'sqlite3', '1.3.13'
+  # gem 'pg', '0.20.0'
+  gem 'sqlite3', '1.3.13'
   gem 'byebug',  '10.0.2', platform: :mri
 end
 
@@ -40,8 +46,5 @@ end
 
 group :production do
   gem 'pg', '0.20.0'
-  gem 'fog', '1.42'
 end
 
-# Windows環境ではtzinfo-dataというgemを含める必要があります
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
