@@ -31,6 +31,7 @@
 
 # Ignore .tfvars file
 *.tfvars
+# Ignore terraform logs
 *.tfstate
 *.tfstate.backup
 # Local .terraform directories
