@@ -33,4 +33,4 @@
 *.tfvars
 *.tfstate
 *.tfstate.backup
-/.terraform/*
+.terraform/
