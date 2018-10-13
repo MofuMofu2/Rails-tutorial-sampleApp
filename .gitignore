@@ -31,3 +31,6 @@
 
 # Ignore .tfvars file
 *.tfvars
+*.tfstate
+*.tfstate.backup
+/.terraform
