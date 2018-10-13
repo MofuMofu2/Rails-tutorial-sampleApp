@@ -33,5 +33,5 @@
 *.tfvars
 *.tfstate
 *.tfstate.backup
-.terraform/*
-.terraform
+# Local .terraform directories
+**/.terraform/*
