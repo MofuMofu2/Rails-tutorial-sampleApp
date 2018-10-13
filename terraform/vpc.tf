@@ -10,10 +10,12 @@ provider "aws" {
   region     = "${var.region}"
 }
 
-resource "aws_instance" "hello_world_terraform" {
-  ami           = "ami-04d3eb2e1993f679b"
-  instance_type = "t2.micro"
+resource "aws_vpc" "hello_world_terraform" {
+  cidr_block            = "10.1.0.0/16"
+  instance_tenancy      = "dedicated"
+  enable_dns_support    = "true"
+  enable_dns_hostnames  = "true"
   tags {
-    Name = "rails-tutorial-application"
+    Name = "hello_world_terraform"
   }
 }
