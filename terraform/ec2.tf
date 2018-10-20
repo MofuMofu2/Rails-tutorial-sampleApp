@@ -13,6 +13,9 @@ provider "aws" {
 resource "aws_instance" "hello_world_terraform" {
   ami           = "ami-04d3eb2e1993f679b"
   instance_type = "t2.micro"
+  subnet_id = "${aws_subnet.subnet-a.id}"
+  vpc_security_group_ids = "${aws_security_group.hello_world_terraform}.id"
+  associate_public_ip_address = false
   tags {
     Name = "rails-tutorial-application"
   }
