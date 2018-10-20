@@ -27,3 +27,17 @@ resource "aws_subnet" "subnet-b" {
     Name = "hello_world_terraform_subnet-b"
   }
 }
+
+resource "aws_internet_gateway" "web_gateway" {
+  vpc_id = "${aws_vpc.hello_world_terraform.id}"
+}
+
+
+resource "aws_route_table" "main" {
+  vpc_id = "${aws_vpc.hello_world_terraform.id}"
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = "${aws_internet_gateway.web_gateway.id}"
+  }
+}
