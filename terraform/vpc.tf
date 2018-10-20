@@ -43,11 +43,11 @@ resource "aws_route_table" "main" {
 }
 
 resource "aws_route_table_association" "subnet-a" {
-  subnet_id = "${aws_subnet.subnet-a.id}"
-  route_table_id = "${aws_route_table.main.id}"
+  subnet_id       = "${aws_subnet.subnet-a.id}"
+  route_table_id  = "${aws_route_table.main.id}"
 }
 
 resource "aws_route_table_association" "subnet-b" {
-  subnet_id = "${aws_subnet.subnet-b.id}"
-  route_table_id = "${aws_route_table.main.id}"
+  subnet_id       = "${aws_subnet.subnet-b.id}"
+  route_table_id  = "${aws_route_table.main.id}"
 }
