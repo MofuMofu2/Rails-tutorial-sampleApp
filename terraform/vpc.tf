@@ -18,13 +18,13 @@ resource "aws_subnet" "subnet-a" {
   }
 }
 
-resource "aws_subnet" "subnet-b" {
+resource "aws_subnet" "subnet-c" {
   vpc_id                  = "${aws_vpc.hello_world_terraform.id}"
   cidr_block              = "10.1.10.0/24"
-  availability_zone       = "ap-northeast-1b"
+  availability_zone       = "ap-northeast-1c"
   map_public_ip_on_launch = true
   tags {
-    Name = "hello_world_terraform_subnet-b"
+    Name = "hello_world_terraform_subnet-c"
   }
 }
 
@@ -47,7 +47,7 @@ resource "aws_route_table_association" "subnet-a" {
   route_table_id  = "${aws_route_table.main.id}"
 }
 
-resource "aws_route_table_association" "subnet-b" {
-  subnet_id       = "${aws_subnet.subnet-b.id}"
+resource "aws_route_table_association" "subnet-c" {
+  subnet_id       = "${aws_subnet.subnet-c.id}"
   route_table_id  = "${aws_route_table.main.id}"
 }
